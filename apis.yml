@@ -1,0 +1,45 @@
+aid: shipping
+name: Shipping.com
+description: >-
+  Shipping.com is a shipping intelligence and marketplace platform that provides
+  inside information on the best deals across the shipping industry worldwide. The
+  platform enables carriers, shippers, and third-party logistics companies (3PLs)
+  to access reduced shipping rates, improve revenue opportunities, and optimize
+  transportation supply chain operations. Shipping.com is headquartered in New York City
+  and connects members of the transportation and logistics industry with competitive
+  pricing and market intelligence.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Shipping
+  - Freight
+  - Logistics
+  - Transportation
+  - Marketplace
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/shipping/refs/heads/main/apis.yml
+created: '2026-05-02'
+modified: '2026-05-02'
+specificationVersion: '0.19'
+apis:
+  - aid: shipping:shipping
+    name: Shipping.com
+    description: >-
+      Shipping.com is a marketplace and intelligence platform for the shipping and
+      logistics industry. The platform provides rate comparisons, market intelligence,
+      and procurement tools for carriers, shippers, and 3PLs. Shipping.com connects
+      transportation buyers and sellers to improve pricing visibility and reduce shipping
+      costs across the supply chain. No public developer API documentation is currently
+      available for external integrations.
+    humanURL: https://www.shipping.com/
+    tags:
+      - Shipping
+      - Freight
+      - Logistics
+      - Transportation
+    properties:
+      - type: Website
+        url: https://www.shipping.com/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
