@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "gs1": "https://www.gs1.org/voc/",
+    "sh": "https://api-evangelist.github.io/shipping/vocabulary/",
+
+    "ShippingRate": "schema:PriceSpecification",
+    "FreightCarrier": "schema:Organization",
+    "Port": "schema:Place",
+    "Shipment": "schema:ParcelDelivery",
+    "Surcharge": "schema:PriceSpecification",
+    "Container": "sh:Container",
+
+    "id": "@id",
+    "carrierId": "schema:identifier",
+    "carrierName": "schema:name",
+    "serviceLevel": "schema:serviceType",
+    "origin": "schema:originAddress",
+    "destination": "schema:deliveryAddress",
+    "unlocode": {
+      "@id": "sh:unlocode",
+      "@type": "xsd:string"
+    },
+    "name": "schema:name",
+    "country": "schema:addressCountry",
+    "region": "schema:addressRegion",
+    "rate": "schema:priceSpecification",
+    "amount": "schema:price",
+    "currency": "schema:priceCurrency",
+    "unit": "schema:unitCode",
+    "validFrom": {
+      "@id": "schema:validFrom",
+      "@type": "xsd:date"
+    },
+    "validTo": {
+      "@id": "schema:validThrough",
+      "@type": "xsd:date"
+    },
+    "transitTime": "sh:transitTimeDays",
+    "sailingFrequency": "sh:sailingFrequency",
+    "surcharges": "sh:surcharges",
+    "commodity": "sh:commodity",
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+
+    "FCL": "sh:FullContainerLoad",
+    "LCL": "sh:LessThanContainerLoad",
+    "TEU": "sh:TwentyFootEquivalentUnit",
+    "FEU": "sh:FortyFootEquivalentUnit",
+    "BAF": "sh:BunkerAdjustmentFactor",
+    "PSS": "sh:PeakSeasonSurcharge",
+    "GRI": "sh:GeneralRateIncrease",
+    "THC": "sh:TerminalHandlingCharge"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "rate-msk-sha-lax-2024q1",
+  "carrierId": "carrier-maersk",
+  "carrierName": "Maersk Line",
+  "serviceLevel": "FCL",
+  "origin": {
+    "unlocode": "CNSHA",
+    "name": "Shanghai",
+    "country": "CN",
+    "region": "Asia Pacific"
+  },
+  "destination": {
+    "unlocode": "USLAX",
+    "name": "Los Angeles",
+    "country": "US",
+    "region": "North America"
+  },
+  "rate": {
+    "amount": 1800.00,
+    "currency": "USD",
+    "unit": "per-TEU"
+  },
+  "validFrom": "2024-01-01",
+  "validTo": "2024-03-31",
+  "transitTime": 14,
+  "sailingFrequency": "Weekly",
+  "surcharges": [
+    {
+      "code": "BAF",
+      "name": "Bunker Adjustment Factor",
+      "amount": 250.00,
+      "currency": "USD",
+      "unit": "per-TEU"
+    },
+    {
+      "code": "PSS",
+      "name": "Peak Season Surcharge",
+      "amount": 500.00,
+      "currency": "USD",
+      "unit": "per-TEU"
+    },
+    {
+      "code": "THC",
+      "name": "Terminal Handling Charge",
+      "amount": 175.00,
+      "currency": "USD",
+      "unit": "per-TEU"
+    }
+  ],
+  "commodity": "General Cargo",
+  "createdAt": "2023-12-15T10:00:00Z"
+}

@@ -1,0 +1,189 @@
+name: Shipping.com Vocabulary
+description: >-
+  Domain vocabulary for the ocean freight and shipping industry as used by
+  Shipping.com's rate intelligence and marketplace platform. Covers freight terms,
+  container types, surcharge codes, trade lane terminology, and logistics concepts.
+version: "1.0"
+created: "2026-05-02"
+modified: "2026-05-02"
+
+terms:
+
+  # Container Types
+  - term: TEU
+    definition: >-
+      Twenty-foot Equivalent Unit — the standard unit of measurement for container
+      shipping capacity. A standard 20-foot shipping container equals 1 TEU. Used
+      to measure cargo volume, vessel capacity, and freight rates.
+    tags:
+      - Container
+      - Measurement
+
+  - term: FEU
+    definition: >-
+      Forty-foot Equivalent Unit — equivalent to 2 TEUs. A standard 40-foot shipping
+      container equals 1 FEU. Rates are often quoted per FEU for high-volume trade lanes.
+    tags:
+      - Container
+      - Measurement
+
+  - term: FCL
+    definition: >-
+      Full Container Load — a shipment that uses the entire capacity of one or more
+      containers. The shipper books and pays for the full container regardless of how
+      much cargo fills it. More cost-effective for high-volume shipments.
+    tags:
+      - Service
+      - Container
+
+  - term: LCL
+    definition: >-
+      Less than Container Load — a shipment where cargo from multiple shippers is
+      consolidated into a single container. Cargo is rated per cubic meter (CBM) or
+      per metric ton, whichever is higher. Cost-effective for small shipments.
+    tags:
+      - Service
+      - Container
+
+  - term: Reefer
+    definition: >-
+      Refrigerated container used to transport temperature-sensitive cargo such as
+      food, pharmaceuticals, or chemicals. Reefer containers maintain precise
+      temperature ranges throughout transit.
+    tags:
+      - Container
+      - Service
+
+  - term: RoRo
+    definition: >-
+      Roll-on Roll-off — a vessel type and shipping service for cargo that can be
+      driven on and off the ship (e.g., automobiles, trucks, heavy equipment).
+      Rates are typically quoted per vehicle or per lane meter.
+    tags:
+      - Service
+      - Vessel
+
+  # Rate Terms
+  - term: Freight Rate
+    definition: >-
+      The price charged by a carrier to transport cargo from origin to destination.
+      Ocean freight rates are typically quoted per TEU or FEU for containers, or
+      per ton/CBM for breakbulk. Rates fluctuate based on supply, demand, fuel costs,
+      and market conditions. Shipping.com provides rate intelligence across all major
+      trade lanes.
+    tags:
+      - Rate
+      - Core
+
+  - term: Spot Rate
+    definition: >-
+      A freight rate available for immediate booking without a long-term contract.
+      Spot rates reflect current market conditions and can be highly volatile.
+      Shipping.com provides spot rate intelligence and procurement tools.
+    tags:
+      - Rate
+
+  - term: Contract Rate
+    definition: >-
+      A freight rate agreed upon between a shipper and carrier for a defined volume
+      over a specified period (typically one year). Contract rates provide price
+      stability in exchange for volume commitments.
+    tags:
+      - Rate
+
+  # Surcharges
+  - term: BAF
+    definition: >-
+      Bunker Adjustment Factor — a surcharge applied by carriers to offset fuel costs.
+      Fluctuates with oil prices and is applied per TEU or FEU. Also called FAF
+      (Fuel Adjustment Factor) or ECA surcharges for emission control areas.
+    tags:
+      - Surcharge
+
+  - term: PSS
+    definition: >-
+      Peak Season Surcharge — a surcharge applied during high-demand periods, typically
+      before major holidays or during the retail import season (July-October). Applied
+      per TEU or FEU on top of the base freight rate.
+    tags:
+      - Surcharge
+
+  - term: GRI
+    definition: >-
+      General Rate Increase — a blanket rate increase announced by carriers across
+      all or specific trade lanes. Carriers announce GRIs in advance, and they may
+      or may not be accepted by the market.
+    tags:
+      - Surcharge
+
+  - term: THC
+    definition: >-
+      Terminal Handling Charge — fees charged by the terminal operator for container
+      handling at the port. Includes loading, unloading, and storage. Applied at
+      both origin and destination ports.
+    tags:
+      - Surcharge
+      - Port
+
+  # Trade Lanes
+  - term: Trade Lane
+    definition: >-
+      A defined ocean freight route between two regions or ports. Major trade lanes
+      include Trans-Pacific (Asia to North America), Asia-Europe, and Transatlantic.
+      Shipping.com provides rate intelligence across all major global trade lanes.
+    tags:
+      - Route
+      - Geography
+
+  - term: UN/LOCODE
+    definition: >-
+      United Nations Code for Trade and Transport Locations — a 5-character code
+      identifying ports, airports, and logistics nodes worldwide. Format: 2-letter
+      country code + 3-letter location code (e.g., USLAX = United States, Los Angeles).
+    tags:
+      - Standards
+      - Geography
+
+  # Market Intelligence
+  - term: Freight Intelligence
+    definition: >-
+      Data and analytics about freight market conditions, rate trends, and supply/demand
+      dynamics across trade lanes and carriers. Shipping.com specializes in providing
+      freight intelligence to help carriers and shippers make informed decisions.
+    tags:
+      - Intelligence
+      - Core
+
+  - term: Freight Marketplace
+    definition: >-
+      An online platform connecting cargo owners (shippers and forwarders) with freight
+      capacity providers (carriers). Shipping.com operates a freight marketplace that
+      enables rate discovery, comparison, and procurement.
+    tags:
+      - Marketplace
+      - Core
+
+  - term: Carrier
+    definition: >-
+      A company that owns or operates vessels to transport cargo. Ocean carriers
+      include major lines such as Maersk, MSC, CMA CGM, COSCO, Evergreen, and
+      Hapag-Lloyd. Carriers publish rates on platforms like Shipping.com.
+    tags:
+      - Participants
+      - Core
+
+  - term: Shipper
+    definition: >-
+      A company or individual that sends cargo via freight transportation. Shippers
+      use Shipping.com to access competitive freight rates, compare carriers, and
+      optimize their shipping costs.
+    tags:
+      - Participants
+
+  - term: Freight Forwarder
+    definition: >-
+      An intermediary that arranges freight transportation on behalf of shippers.
+      Freight forwarders negotiate rates with carriers, manage documentation, and
+      provide logistics expertise. Both carriers and forwarders use Shipping.com.
+    tags:
+      - Participants

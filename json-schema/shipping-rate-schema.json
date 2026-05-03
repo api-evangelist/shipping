@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api-evangelist.github.io/shipping/json-schema/shipping-rate-schema.json",
+  "title": "Shipping Rate",
+  "description": "Represents a shipping rate quote from a carrier as provided by the Shipping.com marketplace platform",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this rate quote"
+    },
+    "carrierId": {
+      "type": "string",
+      "description": "Identifier of the carrier providing this rate"
+    },
+    "carrierName": {
+      "type": "string",
+      "description": "Name of the carrier (e.g., Maersk, MSC, CMA CGM)"
+    },
+    "serviceLevel": {
+      "type": "string",
+      "description": "Service level or service type offered by the carrier",
+      "enum": ["FCL", "LCL", "FCL-Reefer", "LCL-Reefer", "Breakbulk", "RoRo", "Air-Freight"]
+    },
+    "origin": {
+      "$ref": "#/definitions/Port",
+      "description": "Origin port or location"
+    },
+    "destination": {
+      "$ref": "#/definitions/Port",
+      "description": "Destination port or location"
+    },
+    "rate": {
+      "type": "object",
+      "description": "Rate information",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Rate amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code (ISO 4217)",
+          "default": "USD"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement for the rate",
+          "enum": ["per-TEU", "per-FEU", "per-ton", "per-cbm", "per-shipment", "per-kg"]
+        }
+      },
+      "required": ["amount", "currency", "unit"]
+    },
+    "validFrom": {
+      "type": "string",
+      "format": "date",
+      "description": "Date from which this rate is valid"
+    },
+    "validTo": {
+      "type": "string",
+      "format": "date",
+      "description": "Date until which this rate is valid"
+    },
+    "transitTime": {
+      "type": "integer",
+      "description": "Estimated transit time in days"
+    },
+    "sailingFrequency": {
+      "type": "string",
+      "description": "Frequency of service (e.g., Weekly, Bi-weekly)"
+    },
+    "surcharges": {
+      "type": "array",
+      "description": "Additional surcharges applicable to this rate",
+      "items": {
+        "$ref": "#/definitions/Surcharge"
+      }
+    },
+    "commodity": {
+      "type": "string",
+      "description": "Commodity or cargo type this rate applies to"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this rate was created or received"
+    }
+  },
+  "required": ["id", "carrierId", "carrierName", "origin", "destination", "rate", "validFrom", "validTo"],
+  "definitions": {
+    "Port": {
+      "type": "object",
+      "description": "Port or shipping location",
+      "properties": {
+        "unlocode": {
+          "type": "string",
+          "description": "UN/LOCODE for the port (e.g., USLAX for Los Angeles)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Human-readable port name"
+        },
+        "country": {
+          "type": "string",
+          "description": "Two-letter ISO 3166-1 alpha-2 country code"
+        },
+        "region": {
+          "type": "string",
+          "description": "Geographic region (e.g., North America, Asia Pacific)"
+        }
+      },
+      "required": ["unlocode", "name"]
+    },
+    "Surcharge": {
+      "type": "object",
+      "description": "A surcharge applied on top of the base freight rate",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "Standard surcharge code (e.g., BAF, PSS, GRI, THC)"
+        },
+        "name": {
+          "type": "string",
+          "description": "Full name of the surcharge"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Surcharge amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency for this surcharge"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement for this surcharge"
+        }
+      },
+      "required": ["code", "name", "amount", "currency"]
+    }
+  }
+}

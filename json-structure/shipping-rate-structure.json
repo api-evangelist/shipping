@@ -1,0 +1,198 @@
+{
+  "title": "Shipping Rate Structure",
+  "description": "Field-by-field structural documentation for a shipping rate quote on the Shipping.com marketplace platform",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier for this rate quote, assigned by Shipping.com when the rate is published or queried."
+    },
+    {
+      "name": "carrierId",
+      "type": "string",
+      "required": true,
+      "description": "Unique identifier of the ocean carrier or freight forwarder providing this rate."
+    },
+    {
+      "name": "carrierName",
+      "type": "string",
+      "required": true,
+      "description": "Human-readable name of the carrier (e.g., Maersk, MSC, CMA CGM, Evergreen)."
+    },
+    {
+      "name": "serviceLevel",
+      "type": "string",
+      "required": false,
+      "description": "Shipping service type. FCL = Full Container Load, LCL = Less than Container Load, RoRo = Roll-on Roll-off.",
+      "enum": ["FCL", "LCL", "FCL-Reefer", "LCL-Reefer", "Breakbulk", "RoRo", "Air-Freight"]
+    },
+    {
+      "name": "origin",
+      "type": "object",
+      "required": true,
+      "description": "Origin port or shipping location with UN/LOCODE identifier.",
+      "fields": [
+        {
+          "name": "unlocode",
+          "type": "string",
+          "required": true,
+          "description": "UN/LOCODE port identifier (5-character code, e.g., USLAX, CNSHA, DEHAM)"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Human-readable port name (e.g., Los Angeles, Shanghai, Hamburg)"
+        },
+        {
+          "name": "country",
+          "type": "string",
+          "required": false,
+          "description": "ISO 3166-1 alpha-2 country code (e.g., US, CN, DE)"
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "required": false,
+          "description": "Geographic trade region (e.g., North America, Asia Pacific, Europe)"
+        }
+      ]
+    },
+    {
+      "name": "destination",
+      "type": "object",
+      "required": true,
+      "description": "Destination port or shipping location.",
+      "fields": [
+        {
+          "name": "unlocode",
+          "type": "string",
+          "required": true,
+          "description": "UN/LOCODE port identifier"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Human-readable port name"
+        },
+        {
+          "name": "country",
+          "type": "string",
+          "required": false,
+          "description": "ISO 3166-1 alpha-2 country code"
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "required": false,
+          "description": "Geographic trade region"
+        }
+      ]
+    },
+    {
+      "name": "rate",
+      "type": "object",
+      "required": true,
+      "description": "Base freight rate amount, currency, and pricing unit.",
+      "fields": [
+        {
+          "name": "amount",
+          "type": "number",
+          "required": true,
+          "description": "Numeric rate amount (e.g., 1200.00 for $1,200 per TEU)"
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "required": true,
+          "description": "ISO 4217 currency code. Most ocean freight rates are denominated in USD."
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "required": true,
+          "description": "Pricing unit: per-TEU (20ft container), per-FEU (40ft container), per-ton, per-cbm, per-shipment, or per-kg"
+        }
+      ]
+    },
+    {
+      "name": "validFrom",
+      "type": "string",
+      "format": "date",
+      "required": true,
+      "description": "ISO 8601 date from which this rate becomes effective (e.g., 2024-01-01)."
+    },
+    {
+      "name": "validTo",
+      "type": "string",
+      "format": "date",
+      "required": true,
+      "description": "ISO 8601 date until which this rate is valid (e.g., 2024-03-31). Rates may be updated quarterly or monthly."
+    },
+    {
+      "name": "transitTime",
+      "type": "integer",
+      "required": false,
+      "description": "Estimated transit time in calendar days from origin port to destination port."
+    },
+    {
+      "name": "sailingFrequency",
+      "type": "string",
+      "required": false,
+      "description": "How often the carrier operates this service (e.g., Weekly, Bi-weekly, Monthly)."
+    },
+    {
+      "name": "surcharges",
+      "type": "array",
+      "required": false,
+      "description": "Array of additional surcharges on top of the base freight rate. Common surcharges include BAF (Bunker Adjustment Factor), PSS (Peak Season Surcharge), GRI (General Rate Increase), and THC (Terminal Handling Charges).",
+      "items": [
+        {
+          "name": "code",
+          "type": "string",
+          "required": true,
+          "description": "Standard industry surcharge code"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "required": true,
+          "description": "Full name of the surcharge"
+        },
+        {
+          "name": "amount",
+          "type": "number",
+          "required": true,
+          "description": "Surcharge amount"
+        },
+        {
+          "name": "currency",
+          "type": "string",
+          "required": true,
+          "description": "Currency for this surcharge amount"
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "required": false,
+          "description": "Unit of measurement for this surcharge"
+        }
+      ]
+    },
+    {
+      "name": "commodity",
+      "type": "string",
+      "required": false,
+      "description": "Commodity type or cargo description this rate applies to (e.g., General Cargo, Electronics, Chemicals)."
+    },
+    {
+      "name": "createdAt",
+      "type": "string",
+      "format": "date-time",
+      "required": false,
+      "description": "ISO 8601 timestamp when this rate was published to the Shipping.com marketplace."
+    }
+  ]
+}
