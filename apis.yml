@@ -86,6 +86,8 @@ apis:
         url: https://api.worldbank.org/v2/
 
 common:
+  - type: DomainSecurity
+    url: security/shipping-domain-security.yml
   - type: Website
     url: https://www.shipping.com/
   - type: Blog
