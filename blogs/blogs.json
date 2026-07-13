@@ -2,11 +2,10 @@
   "repo": "shipping",
   "feeds": [
     {
-      "source": "https://www.shipping.com/blog/",
-      "saved": 0,
-      "error": "DNS does not resolve (ENOTFOUND)"
+      "source": "https://www.shipping.com/",
+      "error": "URLError"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-27T13:09:51Z"
+  "fetched": "2026-07-11T11:50:51Z"
 }
