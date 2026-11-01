@@ -64,91 +64,140 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/shipping/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/shipping/refs/heads/main/apis.yml)
-
 Shipping.com is a shipping intelligence and marketplace platform that provides inside information on the best deals across the shipping industry worldwide. The platform enables carriers, shippers, and third-party logistics companies (3PLs) to access reduced shipping rates, improve revenue opportunities, and optimize transportation supply chain operations. Shipping.com is headquartered in New York City and connects members of the transportation and logistics industry with competitive pricing and market intelligence across all major ocean freight trade lanes.
 
-## Timestamps
+**Areas:** Shipping · Freight · Logistics · Transportation · Marketplace · Rate Intelligence · Ocean Freight · Supply Chain
 
-- **Created:** 2026-05-02
-- **Modified:** 2026-05-02
+## Shipping.com on APIs.io
 
-## APIs
+Everything profiled for Shipping.com is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/shipping/](https://apis.io/providers/shipping/)** — or go straight to one of the APIs or properties below.
 
-### Shipping.com Rate Intelligence Platform
+### APIs (3)
 
-Shipping.com provides a marketplace and intelligence platform for the ocean freight and logistics industry. The platform aggregates freight rates from major carriers and provides rate comparison, market analytics, and procurement tools. No public developer API is currently available; the platform is accessed via the web portal.
+- [Shipping.com Rate Intelligence Platform](https://apis.io/apis/shipping/shipping-platform/) — Shipping.com provides a marketplace and intelligence platform for the ocean freight and logistics industry. The platform aggregates freight rates from major…
+- [Freightos Baltic Index (FBX)](https://apis.io/apis/shipping/freightos-baltic-index/) — The Freightos Baltic Index is the global benchmark for container freight rates, providing weekly assessments of freight rates across major trade lanes. The…
+- [World Bank Commodity Markets Data](https://apis.io/apis/shipping/world-bank-commodity-markets/) — The World Bank provides commodity price data including shipping-related indices such as the Baltic Dry Index (BDI) and fuel prices that affect freight…
 
-**Human URL:** [https://www.shipping.com/](https://www.shipping.com/)
+### Published properties
 
-#### Tags
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Shipping, Freight, Rate Intelligence, Marketplace, Ocean Freight
+#### JSON Schema (1)
 
----
+The data models the API reads and writes.
 
-### Freightos Baltic Index (FBX)
+- [Shipping Rate](https://apis.io/schemas/shipping/shipping-rate/)
 
-The Freightos Baltic Index is the global benchmark for container freight rates, providing weekly assessments across major trade lanes including Trans-Pacific, Asia-Europe, and Transatlantic.
+#### JSON Structure (1)
 
-**Human URL:** [https://fbx.freightos.com/](https://fbx.freightos.com/)
+Data models expressed in JSON Structure.
 
-#### Tags
+- [Shipping Rate Structure](https://apis.io/json-structure/shipping/shipping-rate-structure/)
 
-Rate Index, Benchmarking, Ocean Freight, Market Data
+#### JSON-LD (1)
 
----
+Linked-data contexts for the provider's vocabulary.
 
-### World Bank Commodity Markets Data
+- [Shipping Context](https://apis.io/jsonld/shipping/shipping-context/)
 
-The World Bank provides commodity price data including shipping-related indices such as the Baltic Dry Index (BDI) and fuel prices that affect freight rates.
+#### Vocabulary (1)
 
-**Human URL:** [https://www.worldbank.org/en/research/commodity-markets](https://www.worldbank.org/en/research/commodity-markets)
+The provider's domain terms, defined.
 
-#### Tags
+- [Shipping.com Vocabulary](https://apis.io/vocabularies/shipping/shipping-vocabulary/)
 
-Market Data, Commodity Prices, Economic Data, Open Data
+#### Examples (1)
 
----
+Example requests and responses.
 
-## Common Properties
+- [Shipping Rate Example](https://apis.io/examples/shipping/shipping-rate-example/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Shipping.com — jsonschema rules](https://apis.io/rules/shipping/shipping-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Shipping Domain Security](https://apis.io/security/shipping/shipping-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Shipping Plans Pricing](https://apis.io/plans/shipping/shipping-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Shipping Rate Limits](https://apis.io/rate-limits/shipping/shipping-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Shipping Finops](https://apis.io/finops/shipping/shipping-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.shipping.com/)
 - [Blog](https://www.shipping.com/blog/)
-- [LinkedIn](https://www.linkedin.com/company/shipping-com/)
 
-## Artifacts
+## API Evangelist rating
 
-### JSON Schemas
+**Kin Score 18.9** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-| File | Description |
-|------|-------------|
-| [shipping-rate-schema.json](json-schema/shipping-rate-schema.json) | JSON Schema for an ocean freight rate quote on the Shipping.com marketplace |
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 17.2 |
+| Contract governance | 23.5 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 17.9 |
+| Access clarity | 7.9 |
 
-### JSON Structures
+**Agent readiness 1.9** — human-only
 
-| File | Description |
-|------|-------------|
-| [shipping-rate-structure.json](json-structure/shipping-rate-structure.json) | Field-by-field structural documentation for a shipping rate quote |
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-### JSON-LD Context
+**Regulatory alignment 10.8** — Horizontal (data, software, accessibility, platform)
 
-| File | Description |
-|------|-------------|
-| [shipping-context.jsonld](json-ld/shipping-context.jsonld) | JSON-LD context mapping shipping domain vocabulary to schema.org |
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/shipping/](https://apis.io/providers/shipping/).
 
-### Examples
+## How this profile is made
 
-| File | Description |
-|------|-------------|
-| [shipping-rate-example.json](examples/shipping-rate-example.json) | Example FCL freight rate from Shanghai to Los Angeles with surcharges |
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### Vocabulary
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Shipping.com: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-| File | Description |
-|------|-------------|
-| [shipping-vocabulary.yml](vocabulary/shipping-vocabulary.yml) | Ocean freight domain vocabulary covering container types, rates, surcharges, and trade lane terms |
+## Open an issue
 
-## Maintainers
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/shipping/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
